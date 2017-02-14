@@ -179,8 +179,11 @@
         var default_class = ed.getParam("uploadimage_default_img_class", "");
         var figure = ed.getParam("uploadimage_figure", false);
         var alt_text = getInputValue("alt");
+        var class_name = getInputValue("class_name");
 
         var imgstr = "<img src='" + json["image"]["url"] + "'";
+        if(class_name != "")
+          default_class += class_name;
 
         if(default_class != "")
           imgstr += " class='" + default_class + "'";
