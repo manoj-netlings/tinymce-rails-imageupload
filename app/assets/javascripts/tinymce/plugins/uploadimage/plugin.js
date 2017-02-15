@@ -77,6 +77,7 @@
           var ctrl = inputs[i];
 
           if(ctrl.tagName.toLowerCase() == 'input' && ctrl.type != "hidden") {
+            alert(ctrl.type);
             if(ctrl.type == "file") {
               ctrl.name = "file";
 
@@ -86,9 +87,9 @@
                 'boxShadow': 'none',
                 'webkitBoxShadow': 'none',
               });
-            } //else {
-             // ctrl.name = "alt";
-            //}
+            }else {
+             ctrl.name = "alt";
+            }
           }
         }
 
