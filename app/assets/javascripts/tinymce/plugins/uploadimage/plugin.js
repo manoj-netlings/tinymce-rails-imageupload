@@ -87,7 +87,11 @@
                 'boxShadow': 'none',
                 'webkitBoxShadow': 'none',
               });
-            }else {
+            }
+            else if(ctrl.type == "textbox"){
+              ctrl.name = "class";
+            }
+            else {
              ctrl.name = "alt";
             }
           }
