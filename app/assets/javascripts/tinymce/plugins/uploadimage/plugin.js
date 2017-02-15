@@ -86,9 +86,9 @@
                 'boxShadow': 'none',
                 'webkitBoxShadow': 'none',
               });
-            } else {
-              ctrl.name = "alt";
-            }
+            } //else {
+             // ctrl.name = "alt";
+            //}
           }
         }
 
