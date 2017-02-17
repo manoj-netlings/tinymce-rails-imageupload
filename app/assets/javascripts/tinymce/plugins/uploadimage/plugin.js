@@ -20,6 +20,9 @@
             {type: 'textbox', name: 'alt',  label: ed.translate('Image description')},
             {type: 'textbox', name: 'class',  classes: 'class-name', label: ed.translate('Image class')},
             {type: 'listbox', name: 'class', label  :  ed.translate('Image class'),
+                    onselect: function( ) {
+                     alert("Value is "+this.value());
+                   },
                     values : [
                         { text: 'None', value: '' },
                         { text: 'Full Width', value: 'full-width-img' }
@@ -102,7 +105,7 @@
             }
           }
         }
-        form.appendChild(createElement('input', {type: "text", name: "class", value: "full-width"}));
+        form.appendChild(createElement('input', {type: "hidden", name: "class", value: "full-width"}));
         body.appendChild(form);
       }
 
