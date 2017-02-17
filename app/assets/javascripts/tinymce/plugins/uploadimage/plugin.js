@@ -18,7 +18,7 @@
             {type: 'iframe',  url: 'javascript:void(0)'},
             {type: 'textbox', name: 'file', label: ed.translate('Choose an image'), subtype: 'file'},
             {type: 'textbox', name: 'alt',  label: ed.translate('Image description')},
-            {type: 'textbox', name: 'class',  label: ed.translate('Image class')},
+            {type: 'textbox', name: 'class',  classes: 'class-name', label: ed.translate('Image class')},
             {type: 'container', classes: 'error', html: "<p style='color: #b94a48;'>&nbsp;</p>"},
 
             // Trick TinyMCE to add a empty div that "preloads" the throbber image
@@ -78,6 +78,7 @@
 
           if(ctrl.tagName.toLowerCase() == 'input' && ctrl.type != "hidden") {
             console.log(ctrl);
+            alert(ctrl.type);
             if(ctrl.type == "file") {
               ctrl.name = "file";
 
