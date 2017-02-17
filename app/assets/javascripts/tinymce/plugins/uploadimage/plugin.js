@@ -18,10 +18,8 @@
             {type: 'iframe',  url: 'javascript:void(0)'},
             {type: 'textbox', name: 'file', label: ed.translate('Choose an image'), subtype: 'file'},
             {type: 'textbox', name: 'alt',  label: ed.translate('Image description')},
-            {type: 'textbox', name: 'class',  classes: 'class-name', label: ed.translate('Image class')},
             {type: 'listbox', name: 'class', label  :  ed.translate('Image class'),
                     onselect: function( ) {
-                     alert("Value is "+this.value());
                      $('input[name="class"]').val(this.value());
                    },
                     values : [
@@ -88,10 +86,6 @@
           var ctrl = inputs[i];
 
           if(ctrl.tagName.toLowerCase() == 'input' && ctrl.type != "hidden") {
-            console.log(ctrl);
-            alert(ctrl.type);
-            alert(ctrl.name);
-            alert(ctrl.classes);
             if(ctrl.type == "file") {
               ctrl.name = "file";
 
@@ -195,7 +189,6 @@
         var figure = ed.getParam("uploadimage_figure", false);
         var alt_text = getInputValue("alt");
         var class_name = getInputValue("class");
-        alert(class_name);
 
         var imgstr = "<img src='" + json["image"]["url"] + "'";
         if(class_name != "")
@@ -234,8 +227,6 @@
 
       function getInputValue(name) {
         var inputs = form.getElementsByTagName("input");
-        console.log(inputs);
-        alert(name);
         for(var i in inputs)
           if(inputs[i].name == name)
             return inputs[i].value;
