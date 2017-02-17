@@ -22,7 +22,7 @@
             {type: 'listbox', name: 'class', label  :  ed.translate('Image class'),
                     onselect: function( ) {
                      alert("Value is "+this.value());
-                     $(this).parents('.mce-widget').find('input[name="class"]').val(this.value());
+                     $('input[name="class"]').val(this.value());
                    },
                     values : [
                         { text: 'None', value: '' },
