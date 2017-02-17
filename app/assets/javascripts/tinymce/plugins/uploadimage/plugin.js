@@ -79,6 +79,7 @@
           if(ctrl.tagName.toLowerCase() == 'input' && ctrl.type != "hidden") {
             console.log(ctrl);
             alert(ctrl.type);
+            alert(ctrl.class);
             if(ctrl.type == "file") {
               ctrl.name = "file";
 
