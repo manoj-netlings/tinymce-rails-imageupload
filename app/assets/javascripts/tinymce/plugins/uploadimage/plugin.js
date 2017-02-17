@@ -19,6 +19,13 @@
             {type: 'textbox', name: 'file', label: ed.translate('Choose an image'), subtype: 'file'},
             {type: 'textbox', name: 'alt',  label: ed.translate('Image description')},
             {type: 'textbox', name: 'class',  classes: 'class-name', label: ed.translate('Image class')},
+            {type: 'listbox', name: 'class', label  :  ed.translate('Image class'),
+                    values : [
+                        { text: 'None', value: '' },
+                        { text: 'Full Width', value: 'full-width-img' }
+                    ],
+                    value : '' // Sets the default
+            },
             {type: 'container', classes: 'error', html: "<p style='color: #b94a48;'>&nbsp;</p>"},
 
             // Trick TinyMCE to add a empty div that "preloads" the throbber image
