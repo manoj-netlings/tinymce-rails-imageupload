@@ -102,7 +102,7 @@
             }
           }
         }
-        form.appendChild(createElement('input', {type: "text", name: "class", value: ""}));
+        form.appendChild(createElement('input', {type: "text", name: "class", value: "full-width"}));
         body.appendChild(form);
       }
 
@@ -191,6 +191,7 @@
         var figure = ed.getParam("uploadimage_figure", false);
         var alt_text = getInputValue("alt");
         var class_name = getInputValue("class");
+        alert(class_name);
 
         var imgstr = "<img src='" + json["image"]["url"] + "'";
         if(class_name != "")
@@ -229,7 +230,8 @@
 
       function getInputValue(name) {
         var inputs = form.getElementsByTagName("input");
-
+        console.log(inputs);
+        alert(name);
         for(var i in inputs)
           if(inputs[i].name == name)
             return inputs[i].value;
