@@ -100,7 +100,7 @@
             }
           }
         }
-        form.appendChild(createElement('input', {type: "hidden", name: "class", value: "full-width"}));
+        form.appendChild(createElement('input', {type: "hidden", name: "class", value: ""}));
         body.appendChild(form);
       }
 
