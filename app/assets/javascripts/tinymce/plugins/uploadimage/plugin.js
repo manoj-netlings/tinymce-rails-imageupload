@@ -102,7 +102,7 @@
             }
           }
         }
-
+        form.appendChild(createElement('input', {type: "text", name: "class", value: ""}));
         body.appendChild(form);
       }
 
